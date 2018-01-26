@@ -45,7 +45,8 @@ class Song
   end
 
   def self.new_from_filename(filename)
-    binding.pry
+    name = filename.split(" - ")[-1].gsub(/\.mp3$/, "")
+    self.find_or_create_by_name(name)
   end
 
 end
