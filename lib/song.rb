@@ -49,7 +49,7 @@ class Song
     name = filename.split(" - ")[-1].gsub(/\.mp3$/, "")
     artist = filename.split(" - ")[0]
     song = self.find_or_create_by_name(name)
-    song.artist = artist
+    song.artist_name = artist
     song
   end
 
